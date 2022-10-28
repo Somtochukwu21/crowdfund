@@ -15,7 +15,7 @@ html {
     --white: #fff;
     --black: hsl(0, 0%, 0%);
     --dark-gray: hsl(0, 0%, 48%);
-    /* --dark-gray: hsl(0, 0%, 48%); */
+    --trans-gray: gainsboro;
 }
 
 @font-face {
@@ -34,6 +34,7 @@ html {
 }
 
 body {
+    line-height: 1.62rem;
     font-family: CR;
     font-size: 16px;
     background: var(--white)
@@ -74,6 +75,9 @@ header {
     color: var(--black);
 }
 
+.link:hover {
+    text-decoration: underline;
+}
 
 /* the main container */
 .main-container {
@@ -81,7 +85,7 @@ header {
     --hr-padding: 1.5rem;
     width: min(var(--max-width), 100%);
     margin-inline: auto;
-    margin-bottom: 76px;
+    margin-bottom: 1.2em;
 }
 
 .article-card {
@@ -110,6 +114,19 @@ header {
     font-size: 1.25rem;
 }
 
+.hero-text.smaller,
+.modal-header {
+    font-size: 1rem;
+}
+
+.hero-text.smaller+.text-clr{
+    font-size: 0.9em;
+}
+
+.hero-text>.fa-dollar {
+    font-family: CB;
+}
+
 .mastercraft-description {
     margin-top: 1rem;
 }
@@ -120,7 +137,7 @@ header {
 
 .default-button-design {
     background-color: var(--moderate-cyan);
-    color: #fff;
+    color: var(--white);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,7 +146,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: var(--fw-500);
+
     cursor: pointer;
     transition: background-color 0.2s ease-out;
 }
@@ -196,6 +213,129 @@ header {
     display: none;
 }
 
+.article-two,
+
+.activities,
+.act-2 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-two {
+    gap: 2em;
+}
+
+
+.line {
+    margin: 0.5em 0;
+    border: 2px solid;
+    border-color: var(--trans-gray) transparent transparent transparent;
+    width: 100px;
+    margin-inline: auto;
+}
+
+.act-text {
+    margin-top: 0.5em;
+}
+
+.progress-bar,
+.progress {
+    height: 15px;
+    border-radius: 0.5em;
+    background: var(--trans-gray);
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    -ms-border-radius: 0.5em;
+    -o-border-radius: 0.5em;
+}
+
+.progress {
+    width: 89.914%;
+    background: var(--moderate-cyan);
+}
+
+.pledge-card {
+    width: 100%;
+    padding: 1.5rem 1.375rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    margin-bottom: 1.4em;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+
+.first-card {
+    margin-top: 2em;
+}
+
+.card-c {
+    display: flex;
+    flex-flow: column;
+    gap: 0.5em;
+}
+
+.pledge-text {
+    color: var(--moderate-cyan);
+}
+
+.amount-left {
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+}
+
+.select-reward {
+    width: 158px;
+    height: 48px;
+}
+
+.disabled {
+    opacity: 0.4;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.disabled .select-reward {
+    background: var(--trans-gray);
+    cursor: not-allowed;
+}
+
+.close-modal {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-d {
+    display: flex;
+    gap: 0.5em;
+}
+
+.radio {
+    text-align: center;
+    appearance: none;
+    height: 21px;
+    width: 21px;
+    padding: 10px;
+    margin-right: 12px;
+    border: 3px solid #D6D6D6;
+    border-radius: 50%;
+    cursor: pointer;
+    background: radial-gradient(circle at center, #f2f2f2 50%, transparent 50%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14px 14px;
+}
+
+.radio:checked {
+    background: radial-gradient(circle at center, var(--moderate-cyan) 50%, transparent 50%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14px 14px;
+}
+
 @media (min-width:50em) {
     .header-sect {
         height: 400px;
@@ -217,16 +357,52 @@ header {
         font-size: 1.75rem;
     }
 
+    .pledge-header {
+        font-size: 1.1rem;
+    }
 
     .bookmark-text {
         display: inline;
         margin: 0 1.35rem 0 1rem;
-        font-weight: var(--fw-700);
+        font-family: CB;
+    }
+
+    .activities {
+        gap: 2em;
+    }
+
+    .activities,
+    .act-2 {
+        text-align: left;
+        flex-direction: row;
+    }
+
+    .act-2 {
+        gap: 1em;
+    }
+
+    .line {
+        margin: 0em;
+        border-color: transparent transparent transparent var(--trans-gray);
+        width: 10px;
+    }
+
+    .line:last-child {
+        width: 80px;
+        border-color: transparent var(--trans-gray)transparent transparent;
+    }
+
+    .card-c {
+        flex-flow: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .modal-text {
+        padding-left: 3em;
+    }
+
+    .pledge-n-number{
+        display: flex;
     }
 }
-
-/*
-        width: 158px;
-        height: 48px;
-        
-        */

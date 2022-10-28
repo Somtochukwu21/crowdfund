@@ -15,6 +15,7 @@
     <title>Frontend Mentor | Crowdfunding product page</title>
 
     <link rel="stylesheet" href="./assets/styles/style.css" />
+    <link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.css" />
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
@@ -32,14 +33,16 @@
         <div class="container">
           <header>
             <div class="crowdfund-logo">
-              <img src="./assets/images/logo.svg" alt="crowdfund-logo" />
+              <a href="">
+                <img src="./assets/images/logo.svg" alt="crowdfund-logo" />
+              </a>
             </div>
             <nav>
               <div></div>
               <ul class="nav-list">
-                <li><a href="" class="link">about</a></li>
-                <li><a href="" class="link">about</a></li>
-                <li><a href="" class="link">about</a></li>
+                <li><a href="#about" class="link">about</a></li>
+                <li><a href="#back-project-btn" class="link">discover</a></li>
+                <li><a href="" class="link">get started</a></li>
               </ul>
             </nav>
           </header>
@@ -75,6 +78,7 @@
                   Back this project
                 </button>
               </div>
+
               <div class="bookmark-btn-sec">
                 <button
                   id="bookmark-btn"
@@ -91,10 +95,229 @@
               </div>
             </div>
           </div>
-          <div class="article-card article-two"></div>
-          <div class="article-card article-three"></div>
+
+          <div class="article-card article-two">
+            <div class="activities">
+              <div class="activity act-1">
+                <h2 class="hero-text">
+                  <span class="fas fa-dollar"></span><span>89,914 </span>
+                </h2>
+                <p class="act-text text-clr">of $100,000 backed</p>
+              </div>
+              <div class="activity act-2">
+                <div class="line"></div>
+                <div>
+                  <h2 class="hero-text">5,007</h2>
+                  <p class="act-text text-clr">total backers</p>
+                </div>
+                <div class="line"></div>
+              </div>
+              <div class="activity act-3">
+                <h2 class="hero-text">56</h2>
+                <p class="act-text text-clr">days left</p>
+              </div>
+            </div>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+          </div>
+
+          <div class="article-card article-three">
+            <div id="about">
+              <div>
+                <h3 class="pledge-header hero-text">About this project</h3>
+                <p class="text-clr mastercraft-description">
+                  The Mastercraft Bamboo Monitor Riser is a sturdy and stylish
+                  platform that elevates your screen to a more comfortable
+                  viewing height. Placing your monitor at eye level has the
+                  potential to improve your posture and make you more
+                  comfortable while at work, helping you stay focused on the
+                  task at hand.
+                </p>
+                <p class="text-clr mastercraft-description">
+                  Featuring artisan craftsmanship, the simplicity of design
+                  creates extra desk space below your computer to allow
+                  notepads, pens, and USB sticks to be stored under the stand.
+                </p>
+              </div>
+
+              <div class="pledge-card first-card">
+                <div class="card-c">
+                  <h3 class="pledge-header hero-text">Bamboo Stand</h3>
+                  <p class="pledge-text">Pledge $25 or more</p>
+                </div>
+                <p class="text-clr mastercraft-description">
+                  You get an ergonomic stand made of natural bamboo. You've
+                  helped us launch our promotional campaign, and you’ll be added
+                  to a special Backer member list.
+                </p>
+                <div class="mastercraft-description card-c">
+                  <div class="amount-left">
+                    <h3 class="hero-text">101</h3>
+                    <p class="text-clr">left</p>
+                  </div>
+
+                  <div class="cta-btn-sec">
+                    <button
+                      type="button"
+                      class="default-button-design select-reward"
+                      aria-label="Back this project"
+                    >
+                      Select Reward
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="pledge-card second-card">
+                <div class="card-c">
+                  <h3 class="pledge-header hero-text">Black Edition Stand</h3>
+                  <p class="pledge-text">Pledge $75 or more</p>
+                </div>
+                <p class="text-clr mastercraft-description">
+                  You get a Black Special Edition computer stand and a personal
+                  thank you. You’ll be added to our Backer member list. Shipping
+                  is included.
+                </p>
+                <div class="mastercraft-description card-c">
+                  <div class="amount-left">
+                    <h3 class="hero-text">64</h3>
+                    <p class="text-clr">left</p>
+                  </div>
+
+                  <div class="cta-btn-sec">
+                    <button
+                      type="button"
+                      class="default-button-design select-reward"
+                      aria-label="Back this project"
+                    >
+                      Select Reward
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pledge-card third-card disabled">
+                <div class="card-c">
+                  <h3 class="pledge-header hero-text">
+                    Mahogany Special Edition
+                  </h3>
+                  <p class="pledge-text">Pledge $200 or more</p>
+                </div>
+                <p class="text-clr mastercraft-description">
+                  You get two Special Edition Mahogany stands, a Backer T-Shirt,
+                  and a personal thank you. You’ll be added to our Backer member
+                  list. Shipping is included.
+                </p>
+                <div class="mastercraft-description card-c">
+                  <div class="amount-left">
+                    <h3 class="hero-text">0</h3>
+                    <p class="text-clr">left</p>
+                  </div>
+
+                  <div class="cta-btn-sec">
+                    <button
+                      type="button"
+                      disabled
+                      class="default-button-design select-reward"
+                      aria-label="Back this project"
+                    >
+                      Out of Stock
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
+
+      <div class="container">
+        <div class="main-container pledge-modal">
+          <div class="article-card">
+            <div class="back-project">
+              <div class="close-modal">
+                <h3 class="pledge-header hero-text">Back this project</h3>
+                <div class="close">
+                  <img src="./assets/images/icon-close-modal.svg" alt="" />
+                </div>
+              </div>
+              <p class="text-clr mastercraft-description">
+                Want to support us in bringing Mastercraft Bamboo Monitor Riser
+                out in the world?
+              </p>
+            </div>
+
+            <form action="">
+              <div class="pledge-card first-card">
+                <label for="free-pledge">
+                  <div class="input-d">
+                    <input
+                      type="radio"
+                      name="pledge"
+                      id="free-pledge"
+                      class="radio"
+                    />
+                    <div>
+                      <h3 class="pledge-header hero-text modal-header">
+                        Pledge with no reward
+                      </h3>
+                    </div>
+                  </div>
+
+                  <div class="modal-text">
+                    <p class="text-clr mastercraft-description">
+                      Choose to support us without a reward if you simply
+                      believe in our project. As a backer, you will be signed up
+                      to receive product updates via email.
+                    </p>
+                  </div>
+                </label>
+              </div>
+              <div class="pledge-card">
+                <label for="bamboo-stand" class="pledge-label">
+                  <div class="pledge-n-number">
+                    <div>
+                      <div class="input-d">
+                        <input
+                          type="radio"
+                          name="pledge"
+                          id="bamboo-stand"
+                          class="radio"
+                        />
+                        <div>
+                          <h3 class="pledge-header hero-text modal-header">
+                            Bamboo Stand
+                          </h3>
+                          <p class="pledge-text">Pledge $25 or more</p>
+                        </div>
+                      </div>
+                      <div class="modal-text">
+                        <p class="text-clr mastercraft-description">
+                          You get an ergonomic stand made of natural bamboo.
+                          You've helped us launch our promotional campaign, and
+                          you’ll be added to a special Backer member list.
+                        </p>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="amount-left">
+                        <h3 class="hero-text smaller">0</h3>
+                        <p class="text-clr">left</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="enter-pledge">
+                    <div class="place-holder">
+                      <p class="text-clr">Enter your pledge</p>
+                    </div>
+                    <div class="pledge-continue"></div>
+                  </div>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
   </body>
 </html>

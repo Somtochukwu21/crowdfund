@@ -273,6 +273,7 @@
                   </div>
                 </label>
               </div>
+
               <div class="pledge-card">
                 <label for="bamboo-stand" class="pledge-label">
                   <div class="pledge-n-number">
@@ -284,7 +285,7 @@
                           id="bamboo-stand"
                           class="radio"
                         />
-                        <div>
+                        <div class="pledge-header-wrapper">
                           <h3 class="pledge-header hero-text modal-header">
                             Bamboo Stand
                           </h3>
@@ -301,6 +302,129 @@
                     </div>
                     <div>
                       <div class="amount-left">
+                        <h3 class="hero-text smaller">101</h3>
+                        <p class="text-clr">left</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="enter-pledge">
+                    <div class="place-holder">
+                      <p class="text-clr">Enter your pledge</p>
+                    </div>
+                    <div class="pledge-button-sec">
+                      <input
+                        id="bamboo-stand-pledge-price-input"
+                        type="number"
+                        name="pledgePrice"
+                        min="25"
+                        class="pledge-price-btn"
+                        value="25"
+                        data-bamboo-stand-input
+                        data-maxlength="4"
+                      />
+                      <button
+                        type="button"
+                        aria-label="Continue"
+                        class="default-button-design continue-button"
+                        data-continue-pledge="bambooStand"
+                      >
+                        Continue
+                      </button>
+                    </div>
+                  </div>
+                </label>
+              </div>
+
+              <div class="pledge-card">
+                <label for="black-edition" class="pledge-label">
+                  <div class="pledge-n-number">
+                    <div>
+                      <div class="input-d">
+                        <input
+                          type="radio"
+                          name="pledge"
+                          id="black-edition"
+                          class="radio"
+                        />
+                        <div class="pledge-header-wrapper">
+                          <h3 class="pledge-header hero-text modal-header">
+                            Black Edition Stand
+                          </h3>
+                          <p class="pledge-text">Pledge $75 or more</p>
+                        </div>
+                      </div>
+                      <div class="modal-text">
+                        <p class="text-clr mastercraft-description">
+                          You get a Black Special Edition computer stand and a
+                          personal thank you. You’ll be added to our Backer
+                          member list. Shipping is included.
+                        </p>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="amount-left">
+                        <h3 class="hero-text smaller">64</h3>
+                        <p class="text-clr">left</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="enter-pledge">
+                    <div class="place-holder">
+                      <p class="text-clr">Enter your pledge</p>
+                    </div>
+                    <div class="pledge-button-sec">
+                      <input
+                        id="bamboo-stand-pledge-price-input"
+                        type="number"
+                        name="pledgePrice"
+                        min="75"
+                        class="pledge-price-btn"
+                        value="75"
+                        data-bamboo-stand-input
+                        data-maxlength="4"
+                      />
+                      <button
+                        type="button"
+                        aria-label="Continue"
+                        class="default-button-design continue-button"
+                        data-continue-pledge="bambooStand"
+                      >
+                        Continue
+                      </button>
+                    </div>
+                  </div>
+                </label>
+              </div>
+
+              <div class="pledge-card disabled">
+                <label for="mahogany" class="pledge-label">
+                  <div class="pledge-n-number">
+                    <div>
+                      <div class="input-d">
+                        <input
+                          type="radio"
+                          name="pledge"
+                          disabled
+                          id="mahogany"
+                          class="radio"
+                        />
+                        <div class="pledge-header-wrapper">
+                          <h3 class="pledge-header hero-text modal-header">
+                            Mahogany Special Edition
+                          </h3>
+                          <p class="pledge-text">Pledge $200 or more</p>
+                        </div>
+                      </div>
+                      <div class="modal-text">
+                        <p class="text-clr mastercraft-description">
+                          You get two Special Edition Mahogany stands, a Backer
+                          T-Shirt, and a personal thank you. You’ll be added to
+                          our Backer member list. Shipping is included.
+                        </p>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="amount-left">
                         <h3 class="hero-text smaller">0</h3>
                         <p class="text-clr">left</p>
                       </div>
@@ -310,11 +434,54 @@
                     <div class="place-holder">
                       <p class="text-clr">Enter your pledge</p>
                     </div>
-                    <div class="pledge-continue"></div>
+                    <div class="pledge-button-sec">
+                      <input
+                        id="bamboo-stand-pledge-price-input"
+                        type="number"
+                        name="pledgePrice"
+                        min="20"
+                        disabled
+                        class="pledge-price-btn"
+                        value="20"
+                        data-bamboo-stand-input
+                        data-maxlength="4"
+                      />
+                      <button
+                        type="button"
+                        aria-label="Continue"
+                        class="default-button-design continue-button"
+                        data-continue-pledge="bambooStand"
+                      >
+                        Continue
+                      </button>
+                    </div>
                   </div>
                 </label>
               </div>
             </form>
+          </div>
+        </div>
+        <div class="main-container succes-modal">
+          <div class="article-card succes-modal-c">
+            <div class="succesful">
+              <img src="./assets/images/icon-check.svg" alt="" />
+            </div>
+            <h3 class="hero-text mastercraft-description">
+              Thanks for your support!
+            </h3>
+            <p class="text-clr mastercraft-description">
+              Your pledge brings us one step closer to sharing Mastercraft
+              Bamboo Monitor Riser worldwide. You will get an email once our
+              campaign is completed.
+            </p>
+
+            <button
+              type="button"
+              aria-label="Continue"
+              class="default-button-design continue-button mastercraft-description"
+            >
+              Got it
+            </button>
           </div>
         </div>
       </div>

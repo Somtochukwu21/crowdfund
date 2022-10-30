@@ -308,6 +308,7 @@
                       </div>
                     </div>
                   </div>
+                  
                   <div class="enter-pledge">
                     <div class="place-holder">
                       <p class="text-clr">Enter your pledge</p>
@@ -334,9 +335,9 @@
                           Continue
                         </button>
                       </div>
-                      <span class="error-message"
-                        >Sorry, you can only pledge $25 or more</span
-                      >
+                      <span id="err1" ;>
+                        Sorry, you can only pledge $25 or more
+                      </span>
                     </div>
                   </div>
                 </label>
@@ -379,25 +380,30 @@
                     <div class="place-holder">
                       <p class="text-clr">Enter your pledge</p>
                     </div>
-                    <div class="pledge-button-sec">
-                      <input
-                        id="bamboo-stand-pledge-price-input"
-                        type="number"
-                        name="pledgePrice"
-                        min="75"
-                        class="pledge-price-btn"
-                        value="75"
-                        data-bamboo-stand-input
-                        data-maxlength="4"
-                      />
-                      <button
-                        type="button"
-                        aria-label="Continue"
-                        class="default-button-design continue-button"
-                        data-continue-pledge="bambooStand"
-                      >
-                        Continue
-                      </button>
+                    <div>
+                      <div class="pledge-button-sec">
+                        <input
+                          id="black-price-input"
+                          type="number"
+                          name="pledgePrice"
+                          min="75"
+                          class="pledge-price-btn"
+                          value="75"
+                          data-bamboo-stand-input
+                          data-maxlength="4"
+                        />
+                        <button
+                          type="button"
+                          aria-label="Continue"
+                          class="default-button-design continue-button"
+                          data-continue-pledge="bambooStand"
+                        >
+                          Continue
+                        </button>
+                      </div>
+                      <span id="err2" ;>
+                        Sorry, you can only pledge $75 or more
+                      </span>
                     </div>
                   </div>
                 </label>

@@ -35,6 +35,6 @@ function AllMethods() {
 
 export const allMethod = new AllMethods();
 
-allMethod.id("pledge-modal", "close", "bamboo-price-input", "");
+allMethod.id("pledge-modal", "close", "bamboo-price-input", "black-price-input",'err1','err2');
 
-allMethod.class(".select-reward");
+allMethod.class(".radio", ".select-reward");

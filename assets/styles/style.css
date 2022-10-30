@@ -314,7 +314,8 @@ header {
 
 #pledge-modal.display,
 #succe-modal.display,
-.error-message.display {
+#err1.display,
+#err2.display {
     display: flex;
 }
 
@@ -401,11 +402,13 @@ input {
     transition: border 0.2s ease-out;
 }
 
-#bamboo-price-input.error {
+#bamboo-price-input.error,
+#black-price-input.error {
     border: 2px solid lightcoral;
 }
 
-.error-message {
+#err1,#err2 {
+    display: none;
     font-size: 12px;
     color: lightcoral;
 }

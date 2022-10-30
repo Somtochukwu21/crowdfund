@@ -2,19 +2,8 @@ import { allMethod, idArray, classArray } from "./all-methods.js";
 
 const [pledgeModal, closeModal, bambooPledge, blackPledge, err1, err2] =
   idArray;
-const [...backPro] = classArray;
 
-for (const iterator of backPro) {
-  if (iterator.has>4) {
-    console.log(iterator);
-    
-  }
-}
-console.log();
-
-const e=document.querySelectorAll('.radio')
-console.log(e.class);
-backPro.forEach(
+classArray.forEach(
   (v) => (v.onclick = () => allMethod.toggle(pledgeModal, "display"))
 );
 
@@ -39,6 +28,3 @@ bambooPledge.oninput = () => {
 blackPledge.oninput = () => {
   name(blackPledge, "min", err2);
 };
-
-
-// console.log(radio);

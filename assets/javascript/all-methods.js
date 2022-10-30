@@ -33,8 +33,30 @@ function AllMethods() {
   };
 }
 
+export function name(id, min, err) {
+  if (!allMethod.validate(id, min)) {
+    allMethod.add(id, "error");
+    allMethod.add(err, "display");
+  }
+
+  if (allMethod.validate(id, min)) {
+    allMethod.remove(id, "error");
+    allMethod.remove(err, "display");
+  }
+}
+
 export const allMethod = new AllMethods();
 
-allMethod.id("pledge-modal", "close", "bamboo-price-input", "black-price-input",'err1','err2');
+allMethod.id(
+  "pledge-modal",
+  "close",
+  "bamboo-price-input",
+  "black-price-input",
+  "err1",
+  "err2",
+  "p1",
+  "p2",
+  "p3"
+);
 
-allMethod.class(".radio", ".select-reward");
+allMethod.class(".select-reward");

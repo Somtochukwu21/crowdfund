@@ -72,7 +72,7 @@
                 <button
                   id="back-project-btn"
                   type="button"
-                  class="default-button-design cta-btn"
+                  class="select-reward default-button-design"
                   aria-label="Back this project"
                 >
                   Back this project
@@ -231,13 +231,13 @@
         </div>
       </main>
 
-      <div class="container">
-        <div class="main-container pledge-modal">
-          <div class="article-card">
+      <div id="pledge-modal" class="container modal-bg">
+        <div class="main-container">
+          <div class="article-card pledge-article">
             <div class="back-project">
               <div class="close-modal">
                 <h3 class="pledge-header hero-text">Back this project</h3>
-                <div class="close">
+                <div id="close">
                   <img src="./assets/images/icon-close-modal.svg" alt="" />
                 </div>
               </div>
@@ -257,6 +257,7 @@
                       id="free-pledge"
                       class="radio"
                     />
+
                     <div>
                       <h3 class="pledge-header hero-text modal-header">
                         Pledge with no reward
@@ -311,25 +312,31 @@
                     <div class="place-holder">
                       <p class="text-clr">Enter your pledge</p>
                     </div>
-                    <div class="pledge-button-sec">
-                      <input
-                        id="bamboo-stand-pledge-price-input"
-                        type="number"
-                        name="pledgePrice"
-                        min="25"
-                        class="pledge-price-btn"
-                        value="25"
-                        data-bamboo-stand-input
-                        data-maxlength="4"
-                      />
-                      <button
-                        type="button"
-                        aria-label="Continue"
-                        class="default-button-design continue-button"
-                        data-continue-pledge="bambooStand"
+                    <div class="rela">
+                      <div class="pledge-button-sec">
+                        <input
+                          id="bamboo-price-input"
+                          type="number"
+                          name="pledgePrice"
+                          min="25"
+                          class="pledge-price-btn"
+                          value="25"
+                          data-bamboo-stand-input
+                          data-maxlength="4"
+                        />
+                        <button
+                          type="button"
+                          id="bamboo-price"
+                          aria-label="Continue"
+                          class="default-button-design continue-button"
+                          data-continue-pledge="bambooStand"
+                        >
+                          Continue
+                        </button>
+                      </div>
+                      <span class="error-message"
+                        >Sorry, you can only pledge $25 or more</span
                       >
-                        Continue
-                      </button>
                     </div>
                   </div>
                 </label>
@@ -439,10 +446,10 @@
                         id="bamboo-stand-pledge-price-input"
                         type="number"
                         name="pledgePrice"
-                        min="20"
+                        min="200"
                         disabled
                         class="pledge-price-btn"
-                        value="20"
+                        value="200"
                         data-bamboo-stand-input
                         data-maxlength="4"
                       />
@@ -461,7 +468,10 @@
             </form>
           </div>
         </div>
-        <div class="main-container succes-modal">
+      </div>
+
+      <div class="container modal-bg" id="succes-modal">
+        <div class="main-container">
           <div class="article-card succes-modal-c">
             <div class="succesful">
               <img src="./assets/images/icon-check.svg" alt="" />
@@ -486,5 +496,6 @@
         </div>
       </div>
     </section>
+    <script type="module" src="./assets/javascript/modal.js"></script>
   </body>
 </html>

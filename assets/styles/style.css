@@ -449,6 +449,7 @@ input:disabled {
 
 .enter-pledge {
     display: none;
+    flex-flow: column;
 }
 
 @media (min-width:50em) {
@@ -529,6 +530,7 @@ input:disabled {
 
     .enter-pledge {
         align-items: center;
+        flex-flow: row;
         justify-content: space-between;
         border-top: 1px solid var(--trans-gray);
         margin-top: 1em;

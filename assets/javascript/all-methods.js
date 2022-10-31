@@ -31,18 +31,17 @@ function AllMethods() {
     };
     return check();
   };
-}
 
-export function name(id, min, err) {
-  if (!allMethod.validate(id, min)) {
-    allMethod.add(id, "error");
-    allMethod.add(err, "display");
-  }
+  this.validateInput = (id, min, err) => {
+    if (!allMethod.validate(id, min)) {
+      allMethod.add(id, "error");
+      allMethod.add(err, "display");
+      return false;
+    }
 
-  if (allMethod.validate(id, min)) {
     allMethod.remove(id, "error");
     allMethod.remove(err, "display");
-  }
+  };
 }
 
 export const allMethod = new AllMethods();
@@ -54,9 +53,12 @@ allMethod.id(
   "black-price-input",
   "err1",
   "err2",
+  "bamboo-stand",
+  "black-edition",
+  "mahogany",
   "p1",
   "p2",
-  "p3"
+  "p3",'bamboo-left','black-left'
 );
 
 allMethod.class(".select-reward");

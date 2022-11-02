@@ -11,6 +11,7 @@ html {
 :root {
 
     --moderate-cyan: hsl(176, 50%, 47%);
+    --trans-cyan: hsla(176, 50%, 47%, 0.2);
     --dark-cyan: hsl(176, 72%, 28%);
     --white: #fff;
     --black: hsl(0, 0%, 0%);
@@ -178,6 +179,23 @@ header {
 
 .cta-btn:disabled {
     opacity: 0.5;
+}
+
+#bookmark-btn svg g circle {
+    fill:#2F2F2F;
+}
+
+#bookmark-btn.work {
+    background: var(--trans-cyan);
+}
+
+
+#bookmark-btn.work svg g circle {
+    fill: var(--moderate-cyan);
+}
+
+#bookmark-btn.work span {
+    color: var(--moderate-cyan);
 }
 
 .bookmark-btn {

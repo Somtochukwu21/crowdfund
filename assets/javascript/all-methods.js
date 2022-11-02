@@ -89,7 +89,8 @@ allMethod.id(
   "main-money",
   "backers",
   "succes-modal",
-  "got"
+  "got",
+  "bookmark-btn"
 );
 
 allMethod.class(".progress", ".select-reward");
@@ -98,3 +99,5 @@ allMethod.class(".progress", ".select-reward");
 const str = value;
 const regex = str.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 */
+
+// const w = document.getElementById("bookmark-btn");

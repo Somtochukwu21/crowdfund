@@ -27,8 +27,9 @@ const [
   backers,
   succes,
   gotten,
+  bookmark,
 ] = idArray;
-console.log(gotten);
+console.log(bookmark);
 const [progress, ...buttons] = classArray;
 
 let value = "89914";
@@ -52,6 +53,13 @@ blackPledge.oninput = () => {
 gotten.onclick = () => {
   allMethod.remove(succes, "display");
 };
+
+bookmark.onclick = ( ) => {
+  allMethod.add(bookmark, "work");
+  bookmark.childNodes[3].innerHTML = "Bookmarked";
+};
+
+// console.log(bookmark.innerHTML.c/hildNodes[0]);
 
 bambooContinue.onclick = () => {
   allMethod.continueButton(first, dbs, bambooPledge, bamLeft, "min", bamNum);

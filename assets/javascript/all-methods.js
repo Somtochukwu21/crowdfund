@@ -33,14 +33,31 @@ function AllMethods() {
   };
 
   this.validateInput = (id, min, err) => {
-    if (!allMethod.validate(id, min)) {
-      allMethod.add(id, "error");
-      allMethod.add(err, "display");
+    if (!this.validate(id, min)) {
+      this.add(id, "error");
+      this.add(err, "display");
       return false;
     }
 
-    allMethod.remove(id, "error");
-    allMethod.remove(err, "display");
+    this.remove(id, "error");
+    this.remove(err, "display");
+  };
+
+  this.continueButton = (real, mainid, id, second, d, third) => {
+    if (this.validate(id, d)) {
+      second.innerHTML -= 1;
+      third.innerHTML -= 1;
+
+      const elme = second.innerHTML < 0 && second.innerHTML < 0;
+      if (elme) {
+        id.disabled = true;
+        this.add(mainid, "disabled");
+        this.add(real, "disabled");
+        third.innerHTML = 0;
+        second.innerHTML = 0;
+      }
+      return elme;
+    }
   };
 }
 
@@ -58,7 +75,26 @@ allMethod.id(
   "mahogany",
   "p1",
   "p2",
-  "p3",'bamboo-left','black-left'
+  "p3",
+  "bamboo-price",
+  "black-price",
+  "bamboo-left",
+  "black-left",
+  "disabledbs",
+  "disabledbe",
+  "bambooLeft",
+  "blackLeft",
+  "first-card",
+  "second-card",
+  "main-money",
+  "backers",
+  "succes-modal",
+  "got"
 );
 
-allMethod.class(".select-reward");
+allMethod.class(".progress", ".select-reward");
+
+/*
+const str = value;
+const regex = str.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+*/

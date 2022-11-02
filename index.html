@@ -90,7 +90,8 @@
                   <img
                     src="./assets/images/icon-bookmark.svg"
                     alt="Bookmark Icon"
-                  /><span class="bookmark-text text-clr">Bookmark</span>
+                  />
+                  <span class="bookmark-text text-clr">Bookmark</span>
                 </button>
               </div>
             </div>
@@ -100,14 +101,15 @@
             <div class="activities">
               <div class="activity act-1">
                 <h2 class="hero-text">
-                  <span class="fas fa-dollar"></span><span>89,914 </span>
+                  <span class="fas fa-dollar"></span
+                  ><span id="main-money"> </span>
                 </h2>
                 <p class="act-text text-clr">of $100,000 backed</p>
               </div>
               <div class="activity act-2">
                 <div class="line"></div>
                 <div>
-                  <h2 class="hero-text">5,007</h2>
+                  <h2 class="hero-text" id="backers">5007</h2>
                   <p class="act-text text-clr">total backers</p>
                 </div>
                 <div class="line"></div>
@@ -141,7 +143,7 @@
                 </p>
               </div>
 
-              <div class="pledge-card first-card">
+              <div class="pledge-card first-card" id="first-card">
                 <div class="card-c">
                   <h3 class="pledge-header hero-text">Bamboo Stand</h3>
                   <p class="pledge-text">Pledge $25 or more</p>
@@ -153,7 +155,7 @@
                 </p>
                 <div class="mastercraft-description card-c">
                   <div class="amount-left">
-                    <h3 class="hero-text">101</h3>
+                    <h3 class="hero-text" id="bambooLeft">101</h3>
                     <p class="text-clr">left</p>
                   </div>
 
@@ -168,7 +170,7 @@
                   </div>
                 </div>
               </div>
-              <div class="pledge-card second-card">
+              <div class="pledge-card" id="second-card">
                 <div class="card-c">
                   <h3 class="pledge-header hero-text">Black Edition Stand</h3>
                   <p class="pledge-text">Pledge $75 or more</p>
@@ -180,7 +182,7 @@
                 </p>
                 <div class="mastercraft-description card-c">
                   <div class="amount-left">
-                    <h3 class="hero-text">64</h3>
+                    <h3 class="hero-text" id="blackLeft">64</h3>
                     <p class="text-clr">left</p>
                   </div>
 
@@ -275,7 +277,7 @@
                 </label>
               </div>
 
-              <div class="pledge-card">
+              <div id="disabledbs" class="pledge-card">
                 <label for="bamboo-stand" class="pledge-label">
                   <div class="pledge-n-number">
                     <div>
@@ -343,7 +345,7 @@
                 </label>
               </div>
 
-              <div class="pledge-card">
+              <div id="disabledbe" class="pledge-card">
                 <label for="black-edition" class="pledge-label">
                   <div class="pledge-n-number">
                     <div>
@@ -394,6 +396,7 @@
                         />
                         <button
                           type="button"
+                          id="black-price"
                           aria-label="Continue"
                           class="default-button-design continue-button"
                           data-continue-pledge="bambooStand"
@@ -493,6 +496,7 @@
 
             <button
               type="button"
+              id="got"
               aria-label="Continue"
               class="default-button-design continue-button mastercraft-description"
             >

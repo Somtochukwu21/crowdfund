@@ -13,11 +13,29 @@ const [
   p1,
   p2,
   p3,
+  bambooContinue,
+  blackContinue,
   bamLeft,
-  blackLeft
+  blackLeft,
+  dbs,
+  dbe,
+  bamNum,
+  blackNum,
+  first,
+  second,
+  mainM,
+  backers,
+  succes,
+  gotten,
 ] = idArray;
+console.log(gotten);
+const [progress, ...buttons] = classArray;
 
-classArray.forEach(
+let value = "89914";
+
+mainM.innerHTML = value;
+
+buttons.forEach(
   (v) => (v.onclick = () => allMethod.toggle(pledgeModal, "display"))
 );
 
@@ -28,7 +46,46 @@ bambooPledge.oninput = () => {
 };
 
 blackPledge.oninput = () => {
-  allMethod.valida(blackPledge, "min", err2);
+  allMethod.validateInput(blackPledge, "min", err2);
+};
+
+gotten.onclick = () => {
+  allMethod.remove(succes, "display");
+};
+
+bambooContinue.onclick = () => {
+  allMethod.continueButton(first, dbs, bambooPledge, bamLeft, "min", bamNum);
+  if (bambooPledge.value >= 25) {
+    const e = Number(mainM.innerHTML) + Number(bambooPledge.value);
+
+    mainM.innerHTML = e;
+    backers.innerHTML++;
+    progress.style.width = mainM.innerHTML / 1000 + "%";
+
+    allMethod.remove(pledgeModal, "display");
+    allMethod.add(succes, "display");
+  }
+};
+
+blackContinue.onclick = () => {
+  allMethod.continueButton(
+    second,
+    dbe,
+    blackPledge,
+    blackLeft,
+    "min",
+    blackNum
+  );
+  if (blackPledge.value >= 25) {
+    const e = Number(mainM.innerHTML) + Number(blackPledge.value);
+
+    mainM.innerHTML = e;
+    backers.innerHTML++;
+
+    progress.style.width = mainM.innerHTML / 1000 + "%";
+    allMethod.remove(pledgeModal, "display");
+    allMethod.add(succes, "display");
+  }
 };
 
 function radioBox(id, element, klass) {
@@ -50,5 +107,5 @@ mahogany.onclick = () => {
   radioBox(mahogany, p3, "display");
 };
 
-
-console.log(bamLeft.innerHTML,blackLeft.innerHTML);
+// window.location.href
+// window.location.title

@@ -247,6 +247,7 @@ header {
     -moz-border-radius: 0.5em;
     -ms-border-radius: 0.5em;
     -o-border-radius: 0.5em;
+    overflow: hidden;
 }
 
 .progress {
@@ -283,6 +284,7 @@ header {
 
 .amount-left {
     display: flex;
+    width: 100%;
     align-items: center;
     gap: 0.2em;
 }
@@ -316,7 +318,7 @@ header {
 #p2.display,
 #p3.display,
 #pledge-modal.display,
-#succe-modal.display,
+#succes-modal.display,
 #err1.display,
 #err2.display {
     display: flex;
@@ -444,7 +446,6 @@ input:disabled {
     justify-content: center;
     text-align: center;
     margin-top: 10em;
-    margin-right: 2em;
 }
 
 .enter-pledge {

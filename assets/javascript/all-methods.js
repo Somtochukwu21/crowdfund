@@ -65,32 +65,33 @@ export const allMethod = new AllMethods();
 
 allMethod.initializeElements(
   "pledge-modal",
+  "main-money",
   "close",
-  "bamboo-price-input",
-  "black-price-input",
-  "err1",
-  "err2",
-  "bamboo-stand",
-  "black-edition",
-  "mahogany",
-  "p1",
-  "p2",
-  "p3",
+  "bamboo-continue",
+  "black-continue",
   "bamboo-price",
   "black-price",
-  "second-card",
-  "bamboo-left",
-  "black-left",
+  "got",
+  "bookmark-btn",
+  "bamboo-stand",
+  "black-edition",
+  "first-card",
+  "succes-modal",
+  "p1",
+  "p2",
   "disabledbs",
   "disabledbe",
+  "bamboo-left",
   "bambooLeft",
+  "second-card",
+  "black-left",
   "blackLeft",
-  "first-card",
-  "main-money",
+  "mahogany",
   "backers",
-  "succes-modal",
-  "got",
-  "bookmark-btn"
+  "p3",
+  "err1",
+  "err2",
+  "menu-bar"
 );
 
 allMethod.class(".progress", ".select-reward");
@@ -99,5 +100,3 @@ allMethod.class(".progress", ".select-reward");
 const str = value;
 const regex = str.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 */
-
-// const w = document.getElementById("bookmark-btn");

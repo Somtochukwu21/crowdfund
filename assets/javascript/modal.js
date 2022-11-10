@@ -1,14 +1,36 @@
 import { allMethod, classContainer, idContainer } from "./all-methods.js";
 
-console.log(classContainer);
-const {
+export const {
   pledge_modal,
   main_money: mainM,
   close: closeModal,
+  bamboo_continue: bambooContinue,
+  black_continue: blackContinue,
   bamboo_price: bambooPledge,
   black_price: blackPledge,
   got: gotten,
+  bookmark_btn: bookmark,
+  bamboo_stand: bamboo,
+  black_edition: black,
+  first_card: first,
+  menu_bar,
+  succes_modal: succes,
+  p1,
+  p2,
+  disabledbs: dbs,
+  disabledbe: dbe,
+  bamboo_left: bamLeft,
+  bambooLeft: bamNum,
+  second_card: second,
+  black_left: blackNum,
+  blackLeft,
+  mahogany,
+  backers,
+  p3,
+  err1,
+  err2,
 } = idContainer;
+
 const { progress, select_reward } = classContainer;
 
 let value = "89914";
@@ -21,7 +43,7 @@ select_reward.forEach(
     })
 );
 
-closeModal.onclick = () => allMethod.remove(pledgeModal, "display");
+closeModal.onclick = () => allMethod.remove(pledge_modal, "display");
 
 bambooPledge.oninput = () => {
   allMethod.validateInput(bambooPledge, "min", err1);
@@ -49,13 +71,14 @@ bambooContinue.onclick = () => {
 
     mainM.innerHTML = e;
     backers.innerHTML++;
-    progress.style.width = mainM.innerHTML / 1000 + "%";
+    progress.forEach((load) => {
+      load.style.width = mainM.innerHTML / 1000 + "%";
+    });
 
-    allMethod.remove(pledgeModal, "display");
+    allMethod.remove(pledge_modal, "display");
     allMethod.add(succes, "display");
   }
 };
-
 blackContinue.onclick = () => {
   allMethod.continueButton(
     second,
@@ -71,8 +94,10 @@ blackContinue.onclick = () => {
     mainM.innerHTML = e;
     backers.innerHTML++;
 
-    progress.style.width = mainM.innerHTML / 1000 + "%";
-    allMethod.remove(pledgeModal, "display");
+    progress.forEach((load) => {
+      load.style.width = mainM.innerHTML / 1000 + "%";
+    });
+    allMethod.remove(pledge_modal, "display");
     allMethod.add(succes, "display");
   }
 };
@@ -98,3 +123,7 @@ mahogany.onclick = () => {
 
 // window.location.href
 // window.location.title
+
+progress.forEach((load) => {
+  load.style.width = mainM.innerHTML / 1000 + "%";
+});

@@ -38,7 +38,11 @@
               </a>
             </div>
             <nav>
-              <div></div>
+              <div id="menu-bar"  >
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div>
               <ul class="nav-list">
                 <li><a href="#about" class="link">about</a></li>
                 <li><a href="#back-project-btn" class="link">discover</a></li>
@@ -93,7 +97,7 @@
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g fill="none" fill-rule="evenodd">
-                      <circle  cx="28" cy="28" r="28" />
+                      <circle cx="28" cy="28" r="28" />
                       <path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z" />
                     </g>
                   </svg>
@@ -324,7 +328,7 @@
                     <div class="rela">
                       <div class="pledge-button-sec">
                         <input
-                          id="bamboo-price-input"
+                          id="bamboo-price"
                           type="number"
                           name="pledgePrice"
                           min="25"
@@ -335,7 +339,7 @@
                         />
                         <button
                           type="button"
-                          id="bamboo-price"
+                          id="bamboo-continue"
                           aria-label="Continue"
                           class="default-button-design continue-button"
                           data-continue-pledge="bambooStand"
@@ -391,7 +395,7 @@
                     <div>
                       <div class="pledge-button-sec">
                         <input
-                          id="black-price-input"
+                          id="black-price"
                           type="number"
                           name="pledgePrice"
                           min="75"
@@ -402,7 +406,7 @@
                         />
                         <button
                           type="button"
-                          id="black-price"
+                          id="black-continue"
                           aria-label="Continue"
                           class="default-button-design continue-button"
                           data-continue-pledge="bambooStand"
@@ -513,5 +517,6 @@
       </div>
     </section>
     <script type="module" src="./assets/javascript/modal.js"></script>
+    <script type="module" src="./assets/javascript/menu.js"></script>
   </body>
 </html>

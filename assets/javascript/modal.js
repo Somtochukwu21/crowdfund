@@ -1,43 +1,24 @@
-import { allMethod, idArray, classArray } from "./all-methods.js";
+import { allMethod, classContainer, idContainer } from "./all-methods.js";
 
-const [
-  pledgeModal,
-  closeModal,
-  bambooPledge,
-  blackPledge,
-  err1,
-  err2,
-  bamboo,
-  black,
-  mahogany,
-  p1,
-  p2,
-  p3,
-  bambooContinue,
-  blackContinue,
-  bamLeft,
-  blackLeft,
-  dbs,
-  dbe,
-  bamNum,
-  blackNum,
-  first,
-  second,
-  mainM,
-  backers,
-  succes,
-  gotten,
-  bookmark,
-] = idArray;
-console.log(bookmark);
-const [progress, ...buttons] = classArray;
+console.log(classContainer);
+const {
+  pledge_modal,
+  main_money: mainM,
+  close: closeModal,
+  bamboo_price: bambooPledge,
+  black_price: blackPledge,
+  got: gotten,
+} = idContainer;
+const { progress, select_reward } = classContainer;
 
 let value = "89914";
-
 mainM.innerHTML = value;
 
-buttons.forEach(
-  (v) => (v.onclick = () => allMethod.toggle(pledgeModal, "display"))
+select_reward.forEach(
+  (v) =>
+    (v.onclick = () => {
+      allMethod.toggle(pledge_modal, "display");
+    })
 );
 
 closeModal.onclick = () => allMethod.remove(pledgeModal, "display");
@@ -54,7 +35,7 @@ gotten.onclick = () => {
   allMethod.remove(succes, "display");
 };
 
-bookmark.onclick = ( ) => {
+bookmark.onclick = () => {
   allMethod.add(bookmark, "work");
   bookmark.childNodes[3].innerHTML = "Bookmarked";
 };

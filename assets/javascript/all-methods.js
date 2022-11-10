@@ -1,19 +1,19 @@
-export const idArray = [];
-export const classArray = [];
+export const idContainer = {};
+export const classContainer = {};
 
 function AllMethods() {
-  this.id = (...data) => {
+  this.initializeElements = (...data) => {
     for (const props of data) {
       const element = document.getElementById(props);
-      idArray.push(element);
+      idContainer[props.replace("-", "_")] = element;
     }
   };
 
-  this.class = (...data) => {
-    for (const key of data) {
-      const element = document.querySelectorAll(key);
+  this.class = (...classNames) => {
+    for (const className of classNames) {
+      const element = document.querySelectorAll(className);
 
-      classArray.push(...element);
+      classContainer[className.replace("-", "_").replace(".", "")] = element;
     }
   };
 
@@ -63,7 +63,7 @@ function AllMethods() {
 
 export const allMethod = new AllMethods();
 
-allMethod.id(
+allMethod.initializeElements(
   "pledge-modal",
   "close",
   "bamboo-price-input",
@@ -78,6 +78,7 @@ allMethod.id(
   "p3",
   "bamboo-price",
   "black-price",
+  "second-card",
   "bamboo-left",
   "black-left",
   "disabledbs",
@@ -85,7 +86,6 @@ allMethod.id(
   "bambooLeft",
   "blackLeft",
   "first-card",
-  "second-card",
   "main-money",
   "backers",
   "succes-modal",
